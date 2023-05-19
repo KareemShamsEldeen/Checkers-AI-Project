@@ -50,7 +50,7 @@ class CheckersWindow(QWidget):
         self.WindowIcon = QIcon('Checker_Icon.png')
         self.setWindowTitle("Checkers Game")
         self.setWindowIcon(self.WindowIcon)
-        self.setFixedSize(1200, 600)
+        self.setFixedSize(600, 400)
 
         # -----------------------player 1------------------------------------------------------------------
         self.p1_icon = QPixmap('robot.png')
@@ -75,13 +75,14 @@ class CheckersWindow(QWidget):
         drop_p1_algorithm_font.setPointSize(9)
         self.drop_p1_algorithm.setFont(drop_p1_algorithm_font)
         self.drop_p1_algorithm.addItems(["Random", "MiniMax", "Alpha-Beta Pruning"])
+        self.drop_p1_algorithm.setCurrentIndex(-1)
 
         self.drop_p1_difficulty = QComboBox()
         drop_p1_difficulty_font = self.drop_p1_difficulty.font()
         drop_p1_difficulty_font.setPointSize(9)
         self.drop_p1_difficulty.setFont(drop_p1_difficulty_font)
         self.drop_p1_difficulty.addItems(["Easy", "Medium", "Hard"])
-
+        self.drop_p1_difficulty.setCurrentIndex(-1)
         # Create a QVBoxLayout instance
         self.layout_p1 = QVBoxLayout()
 
@@ -116,13 +117,14 @@ class CheckersWindow(QWidget):
         drop_p2_algorithm_font.setPointSize(9)
         self.drop_p2_algorithm.setFont(drop_p2_algorithm_font)
         self.drop_p2_algorithm.addItems(["Random", "Human", "MiniMax", "Alpha-Beta Pruning"])
+        self.drop_p2_algorithm.setCurrentIndex(-1)
 
         self.drop_p2_difficulty = QComboBox()
         drop_p2_difficulty_font = self.drop_p2_difficulty.font()
         drop_p2_difficulty_font.setPointSize(9)
         self.drop_p2_difficulty.setFont(drop_p2_difficulty_font)
         self.drop_p2_difficulty.addItems(["Easy", "Medium", "Hard", "None"])
-
+        self.drop_p2_difficulty.setCurrentIndex(-1)
         # Create a QVBoxLayout instance
         self.layout_p2 = QVBoxLayout()
 
